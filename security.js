@@ -12,6 +12,6 @@ export function verifyToken(token, secret) {
   }
 }
 
-export function isOwner(ctx, ownerId) {
+export function isOwner(id, OWNER_ID) { /* ... */ }
   return ctx?.from?.id === Number(ownerId);
 }
