@@ -3,16 +3,20 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { verifyToken } from '../lib/security.js';
-import { notifyOwnerCapture } from '../bot.js';
+
+import { verifyToken } from './security.js';
+import { notifyOwnerCapture } from './bot.js';
 
 const router = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uploadRoot = path.join(__dirname, '../../uploads');
+// لو كان عندك سابقًا ../uploads غيّرها:
+const uploadRoot = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadRoot)) fs.mkdirSync(uploadRoot, { recursive: true });
+
+// ... يكمل الكود تبع storage و upload كما عندك
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
