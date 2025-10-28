@@ -15,3 +15,4 @@ export function verifyToken(token, secret) {
 export function isOwner(id, OWNER_ID) { /* ... */ }
   return ctx?.from?.id === Number(ownerId);
 }
+export function verifyToken(req, res, next) { /* ... */ }
