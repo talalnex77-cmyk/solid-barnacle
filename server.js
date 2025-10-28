@@ -5,7 +5,7 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { launchBot } from './bot.js';
-import requestRoutes from './routes/request.js';
+import requestRoutes from './request.js';
 
 const app = express();
 
