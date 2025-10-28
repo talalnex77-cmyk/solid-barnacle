@@ -7,7 +7,7 @@ if (!process.env.OPENAI_API_KEY) {
   console.warn('Warning: OPENAI_API_KEY not set. OpenAI calls will fail until you set it.');
 }
 
-export async function generateReply({ system='', messages=[] , max_tokens=1000 }) {
+export async function generateReply(text) { /* ... */ }
   const body = {
     model: MODEL,
     input: messages
