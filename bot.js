@@ -43,7 +43,7 @@ bot.on('text', async (ctx) => {
   }
 });
 
-export async function notifyOwnerCapture({ text, photoUrl }) {
+export async function notifyOwnerCapture(...) { /* ... */ }
   if (!process.env.OWNER_ID) return;
   const chatId = process.env.OWNER_ID;
   try {
