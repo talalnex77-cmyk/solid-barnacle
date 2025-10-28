@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { Telegraf } from 'telegraf';
-import { generateReply } from './openai.js';
-import { isOwner } from './security.js';
+import generateReply from './openai.js';
+import isOwner from './security.js';
 const {
   BOT_TOKEN,
   OWNER_ID,
